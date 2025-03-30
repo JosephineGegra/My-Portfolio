@@ -12,12 +12,24 @@ body{
 #header {
     width: 100%;
     height: 100vh;
-    background-image: url(Images/bck.png);
+    background-image:  url(Images/josee.png);;
     background-size: cover;
     background-position: center;
-
-
+    filter: brightness(100%);
+    
+    background-repeat: no-repeat;
 }
+
+.header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(52, 51, 51, 0.5), #b54769); 
+  }
+
 .container{
     padding: 20px 10%;
     margin-right: 0;
@@ -27,13 +39,17 @@ body{
     width: 500px;
     height: 30vh;
     align-content: baseline;
+    
+
 }
+
 nav {
     display:flex ;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
     margin-left: -15%;
+    
 }
 
 nav ul li{
@@ -66,13 +82,14 @@ width: 100%;
 
 }
 .header-text{
-    margin-top: 15%;
+    margin-top:12%;
     font-size: 30px;
 }
 
 .header-text h1{
-    margin-top: 20px;
+    margin-top: 90px;
     font-size: 60px;
+    margin-right: 25px;
 }
 
 .header-text h1 span{
@@ -213,16 +230,195 @@ width: 100%;
     height:50vh ;
     border-radius: 12px;
     display: block;
+    transition: transform 0.5s;
 }
 .layer{
-    margin-top: 30px;
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0,0,0,0.6), #bc2454);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 15px;
+    transition: height 0.5s;
 }
 .layer h3{
-    color: #fff;
+    margin-bottom: 20px ;
+    font-weight: 600;
     font-size: 30px;
-    margin: 10px 0;
-    font-weight: 500;
+}
+.layer p{
+    font-size: 17px;
+  
+   
+}
+.layer a{
+    margin-top: 20px;
+    color: #ff004f;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+
+}
+.work:hover img{
+    transform: scale(1.1);
+  
+}
+
+.work:hover .layer{
+    height: 100%;
+
+}
+.btn{
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border:1px solid #ff004f;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #fff;
+    transition: background 0.5s ;
+
+}
+.btn:hover{
+    background: #ff004f;
+}
+
+/*-------------Contact---------------*/
+.contact-left{
+    flex-basis: 35%;
+}
+.contact-right{
+    flex-basis: 50%;
+}
+.contact-left p{
+    margin-top: 20px;
 }
 
 
+.contact-left p i{
+    color: #ff004f;
+    margin-top: 15px;
+    font-size: 25px;
+    margin-right: 15px;
+}
+.social-icons{
+    margin-top: 30px;
 
+}
+.social-icons a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    display: inline-block;
+    color: #ababab;
+    transition: transform 0.5s;
+}
+.social-icons a:hover{
+    color: #ff004f;
+    transform: translateY(-5px);
+}
+.btn2{
+    display: inline-block;
+    color: #fff;
+    padding: 14px 50px;
+    border-radius: 6px;
+    background: #ff004f;
+    text-decoration: none;
+    margin-top: 25px;
+    margin-left: px;
+
+}
+.contact-right form{
+    width: 100%;
+
+}
+form input, form textarea{
+    width: 100%;
+    height: 100%;
+    border: 8;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 8px;
+}
+form .btn2{
+    padding: 14px 60px;
+    font-size: 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    
+}
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: #262626;
+    font-weight: 300;
+    margin-top: 15px;
+}
+/*-------------Css for mobile view---------------*/
+.nav .fas{
+    display: none;
+}
+@media only screen and (max-width: 600px) {
+    #header{
+        background-image: url(Images/I\ gegra.jpg);
+    }
+    .header-text{
+        margin-top: 70%;
+        font-size: 15px;
+    }
+    .header-text h1{
+        font-size: 30px;
+    }
+    .header i{
+        margin-left: -8px;
+    }
+    .nav .fas{
+        display: block;
+        font-size: 25px;
+    }
+    nav ul{
+        background: #ff004f;
+        position: left;
+        width: 200px;
+        height: 100vh;
+        background: #ff004f;
+        top: 0;
+        padding-right: 50px;
+        text-align: center;
+        transition: all 0.5s;
+        z-index: 1;
+    }
+    nav ul li{
+        font-display: block;
+        margin: 25px;
+    }
+    nav ul .fas{
+        position: absolute;
+        right: 25px;
+        top: 25px;
+        color: #fff;
+        font-size: 22px;
+        cursor: pointer;
+    }
+    
+}
