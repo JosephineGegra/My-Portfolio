@@ -12,7 +12,7 @@ body{
 #header {
     width: 100%;
     height: 100vh;
-    background-image:  url(Images/josee.png);;
+    background-image:  url(Images/josee.png);
     background-size: cover;
     background-position: center;
     filter: brightness(100%);
@@ -39,8 +39,6 @@ body{
     width: 500px;
     height: 30vh;
     align-content: baseline;
-    
-
 }
 
 nav {
@@ -112,7 +110,7 @@ width: 100%;
 }
 .about-col-1 img{
     width:60vh;
-    height: 45vh;
+    height: 55vh;
     border-radius: 15px;
 }
 .about-col-2{
@@ -304,17 +302,30 @@ width: 100%;
 }
 .contact-right{
     flex-basis: 50%;
+    
 }
 .contact-left p{
     margin-top: 20px;
+    margin-bottom: 55px;
+}
+
+.contact-left h1{
+    margin-bottom: 55px;
+    margin-top: 20px;
+}
+
+.contact-left a{
+    font-size: 25px;
+    margin-right: 15px;
 }
 
 
 .contact-left p i{
     color: #ff004f;
-    margin-top: 15px;
+    margin-top: 25px;
     font-size: 25px;
-    margin-right: 15px;
+    margin-right: 35px;
+    
 }
 .social-icons{
     margin-top: 30px;
@@ -323,7 +334,8 @@ width: 100%;
 .social-icons a{
     text-decoration: none;
     font-size: 30px;
-    margin-right: 15px;
+    margin-bottom: 15px;
+    margin-right: 25px;
     display: inline-block;
     color: #ababab;
     transition: transform 0.5s;
